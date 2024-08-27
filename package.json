@@ -2,9 +2,9 @@
   "name": "mashal-vajoo-brainflix-api",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "type": "module",
     "start": "node --watch index.js"
   },
   "author": "",
@@ -12,6 +12,7 @@
   "description": "",
   "dependencies": {
     "axios": "^1.7.5",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2"
   }
