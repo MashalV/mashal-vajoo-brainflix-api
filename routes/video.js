@@ -1,18 +1,6 @@
 import express from "express";
 import fs from "fs";
 
-const imageMapping = {
-    "84e96018-4022-434e-80bf-000ce4cd12b8": "./public/images/image0.jpg",
-    "c05b9a93-8682-4ab6-aff2-92ebb4bbfc14": "./public/images/image1.jpg",
-    "25ce5d91-a262-4dcf-bb87-42b87546bcfa": "./public/images/image2.jpg",
-    "b6f35f03-7936-409b-bd2a-446bcc5f30e7": "./public/images/image3.jpg",
-    "1b964601-a6dd-4fcc-b5f3-1000338c9557": "./public/images/image4.jpg",
-    "9c268c0a-83dc-4b96-856a-bb5ded2772b1": "./public/images/image5.jpg",
-    "fc5261d1-58a0-47e4-9c19-2b7a1715fa1b": "./public/images/image6.jpg",
-    "99478bed-6428-49ed-8eaa-f245a5414336": "./public/images/image7.jpg",
-    "76ca28c0-7dea-4553-887f-8e5129a80fc3": "./public/images/image8.jpg"
-  };
-
 
 const router= express.Router();
 
@@ -43,7 +31,28 @@ router
                 id: generateUniqueID(),
                 ...req.body,
                 timestamp: Date.now(),
-                image: "./public/images/image8.jpg",
+                image: "http://localhost:8080/images/image8.jpg",
+                channel: "Mashal Vajoo",
+                views: "100,000,000",
+                likes: "100,000",
+                duration: "10:10",
+                comments : [
+                    {
+                        id: "0123",
+                        name: "person people",
+                        comment: "hope this works",
+                        likes: "12",
+                        timestamp: Date.now()
+                    },
+                    {
+                        id: "0124",
+                        name: "buddy",
+                        comment: "NO RAGRETS! Not even a letter ",
+                        likes: "420",
+                        timestamp: Date.now()
+                    }
+
+                ]
             };
             videos.push(newVideo);
             writeVideos(videos);
