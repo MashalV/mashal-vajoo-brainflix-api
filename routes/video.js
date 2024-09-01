@@ -14,7 +14,6 @@ const imageMapping = {
   };
 
 
-
 const router= express.Router();
 
 const generateUniqueID = () => {
